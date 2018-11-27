@@ -14,4 +14,10 @@ public class Controller {
         }
         Collections.shuffle(queue);
     }
+
+    void addingNewDocs(){
+        while(queue.size()<50) {
+            queue.add(new Doc(DocType.values()[(int) (Math.random() * 2)]));
+        }
+    }
 }
